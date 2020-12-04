@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+
+
+    .videoBox {
+      width: 90%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 6.2rem;
+      position: absolute;
+      background-image: url('http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/videoBorder.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+    .palyBtn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      width: 15%;
+      z-index: 9;
+    }
+
+    .topBg {
+      width: 100%;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="videoBox">
+    <img class="palyBtn" src="http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/playBtn.png" alt="">
+    <video poster="http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/vfawfwe.png" id="videos"
+      controls="controls" x5-playsinline="" playsinline="" webkit-playsinline=""
+      src="https://lztimg.oss-cn-qingdao.aliyuncs.com/static/h5/1593497462152660.mp4"></video>
+  </div>
+  <img class="content" src="http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/微信图片_20200630143552.jpg"
+    alt="">
+</body>
+
+</html>
+<script>
+  document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+  let obj = {
+    content: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/content.jpg',
+    playBtn: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/playBtn.png',
+    videoBorder: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/videoBorder.png',
+    videoBox: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/videoBox.png',
+  }
+  let videos = document.getElementById("videos");
+  let palyBtn = document.getElementsByClassName('palyBtn')[0]
+  console.log(palyBtn)
+  palyBtn.addEventListener('click', () => {
+    console.log(1)
+    videos.play()
+  })
+</script>

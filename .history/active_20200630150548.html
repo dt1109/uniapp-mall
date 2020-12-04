@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    video {
+      width: 90%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      position: absolute;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <video id="videos" controls="controls"
+    src="https://lztimg.oss-cn-qingdao.aliyuncs.com/static/h5/1593497462152660.mp4"></video>
+  <img class="content" src="http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/content.jpg" alt="">
+</body>
+
+</html>
+<script>
+  let obj = {
+    content: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/content.jpg',
+    playBtn: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/playBtn.png',
+    videoBorder: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/videoBorder.png',
+    videoBox: 'http://lztimg.oss-cn-qingdao.aliyuncs.com/ips/images/20200630/videoBox.png',
+  }
+  let videos = document.getElementById("videos");
+  let playBtn = document.getElementsByTagName('img')[0]
+  playBtn.addEventListener('click', () => {
+    videos.play()
+  })
+</script>
